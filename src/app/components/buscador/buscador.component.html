@@ -1,0 +1,10 @@
+<h1>Buscador: <small>{{ termino }}</small></h1>
+<hr>
+
+<div class="alert alert-warning" role="alert" *ngIf="ceroHeroes">
+    No se encontraron resultados para {{ termino }}
+</div>
+
+<div class="card-columns">
+    <app-heroe-tarjeta [heroe]="heroe" *ngFor="let heroe of heroes"></app-heroe-tarjeta>
+</div>
